@@ -1,6 +1,7 @@
 package com.grim.spring.proadmin.model
 
 import com.fasterxml.jackson.annotation.JsonIgnore
+import com.fasterxml.jackson.annotation.JsonIgnoreType
 import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue
 import jakarta.persistence.GenerationType
@@ -16,9 +17,7 @@ data class UserEntity(
     val id: Int,
     val name: String,
     val lastName: String,
-    @JsonIgnore
-    val username: String,
-    @JsonIgnore
+    val username: String? = null,
     var password: String,
-    val enabled: Boolean
+    val enabled: Boolean = true
 )
