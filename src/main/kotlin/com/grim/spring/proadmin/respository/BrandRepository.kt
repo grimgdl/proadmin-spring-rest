@@ -1,6 +1,6 @@
 package com.grim.spring.proadmin.respository
 
-import com.grim.spring.proadmin.model.Brand
+import com.grim.spring.proadmin.model.BrandEntity
 import org.springframework.data.jpa.repository.JpaRepository
 
-interface BrandRepository: JpaRepository<Brand, Int>
+interface BrandRepository: JpaRepository<BrandEntity, Int>

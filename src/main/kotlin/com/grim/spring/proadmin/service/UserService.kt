@@ -14,9 +14,6 @@ class UserService(@Autowired private val userRepository: UserRepository) {
     }
 
 
-
-
-
     fun createUser(user: UserEntity): UserEntity {
         user.password = BCryptPasswordEncoder().encode(user.password)
         return userRepository.save(user)

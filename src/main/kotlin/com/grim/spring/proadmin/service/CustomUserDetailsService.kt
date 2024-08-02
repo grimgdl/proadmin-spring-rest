@@ -2,6 +2,7 @@ package com.grim.spring.proadmin.service
 
 import com.grim.spring.proadmin.respository.UserRepository
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.security.core.authority.SimpleGrantedAuthority
 import org.springframework.security.core.userdetails.UserDetails
 import org.springframework.security.core.userdetails.UserDetailsService
 import org.springframework.security.core.userdetails.UsernameNotFoundException
@@ -17,10 +18,18 @@ class CustomUserDetailsService(@Autowired private val userRepository: UserReposi
             .orElseThrow {
                 UsernameNotFoundException("User not found ")
             }
+
+        //list of authorities by role
+        val authorities = user.role.authorities.map { authority ->
+            SimpleGrantedAuthority(authority.name)
+        }
+        //println(authorities)
+
         return org.springframework.security.core.userdetails.User.builder()
             .username(user.username)
             .password(user.password)
-            .authorities("USER")
+            .authorities(authorities)
+            .disabled(!user.enabled)
             .build()
     }
 }

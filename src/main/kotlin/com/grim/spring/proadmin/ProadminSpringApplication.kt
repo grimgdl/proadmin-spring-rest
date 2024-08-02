@@ -13,7 +13,7 @@ fun main(args: Array<String>) {
 	val dotenv = Dotenv.load()
 //	println("User ${dotenv["DB_NAME"]}")
 
-	//println(BCryptPasswordEncoder().encode("root"))
+	//println(BCryptPasswordEncoder().encode("gus19890719"))
 
 
 	runApplication<ProadminSpringApplication>(*args)
