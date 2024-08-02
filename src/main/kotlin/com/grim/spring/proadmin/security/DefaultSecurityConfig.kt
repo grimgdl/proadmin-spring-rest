@@ -45,7 +45,10 @@ class DefaultSecurityConfig(@Autowired private val customUserDetailsService: Cus
     @Bean
     fun securityFilterChain(http: HttpSecurity) : SecurityFilterChain {
         http.authorizeHttpRequests { auth ->
-            auth.anyRequest().authenticated()
+            auth
+                .requestMatchers("/user/all").hasAuthority("user.read")
+                .requestMatchers("/user").hasAuthority("user.create")
+                .anyRequest().authenticated()
         }
             .httpBasic { httpBasic ->
                 httpBasic.realmName("Grim")
