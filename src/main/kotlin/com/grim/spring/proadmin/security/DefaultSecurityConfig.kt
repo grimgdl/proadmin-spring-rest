@@ -29,7 +29,6 @@ class DefaultSecurityConfig(@Autowired private val customUserDetailsService: Cus
 //    }
 
 
-
     @Bean
     fun authenticationProvider(): DaoAuthenticationProvider {
         val authenticationProvider = DaoAuthenticationProvider()
@@ -40,22 +39,19 @@ class DefaultSecurityConfig(@Autowired private val customUserDetailsService: Cus
     }
 
 
-
-
     @Bean
-    fun securityFilterChain(http: HttpSecurity) : SecurityFilterChain {
+    fun securityFilterChain(http: HttpSecurity): SecurityFilterChain {
         http.authorizeHttpRequests { auth ->
             auth
                 .requestMatchers("/user/all").hasAuthority("user.read")
                 .requestMatchers("/user").hasAuthority("user.create")
                 .anyRequest().authenticated()
+
+        }.httpBasic { httpBasic ->
+            httpBasic.realmName("Grim")
+        }.csrf { csrf ->
+            csrf.disable()
         }
-            .httpBasic { httpBasic ->
-                httpBasic.realmName("Grim")
-            }
-            .csrf { csrf ->
-                csrf.disable()
-            }
 
 
         return http.build()
@@ -63,7 +59,7 @@ class DefaultSecurityConfig(@Autowired private val customUserDetailsService: Cus
 
 
     @Bean
-    fun passwordEncoder() : PasswordEncoder {
+    fun passwordEncoder(): PasswordEncoder {
         return BCryptPasswordEncoder()
     }
 
