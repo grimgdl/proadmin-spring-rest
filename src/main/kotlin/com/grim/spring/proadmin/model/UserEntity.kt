@@ -1,5 +1,6 @@
 package com.grim.spring.proadmin.model
 
+import com.fasterxml.jackson.annotation.JsonIgnore
 import com.grim.spring.proadmin.model.security.RoleEntity
 import jakarta.persistence.*
 
@@ -14,10 +15,13 @@ data class UserEntity(
     val name: String,
     val lastName: String,
     @Column(unique = true, nullable = false)
+    @JsonIgnore
     val username: String,
     @Column(nullable = false)
+    @JsonIgnore
     var password: String,
-    val enabled: Boolean = true,
+    @Column(nullable = false, columnDefinition = "bit default true")
+    val status: Boolean = true,
 
     @ManyToOne
     @JoinColumn(name = "role_id", nullable = false)

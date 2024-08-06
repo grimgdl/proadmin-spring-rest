@@ -29,7 +29,7 @@ class CustomUserDetailsService(@Autowired private val userRepository: UserReposi
             .username(user.username)
             .password(user.password)
             .authorities(authorities)
-            .disabled(!user.enabled)
+            .disabled(!user.status)
             .build()
     }
 }
