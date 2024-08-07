@@ -5,6 +5,8 @@ import org.springframework.data.jpa.repository.JpaRepository
 
 interface StoreRepository: JpaRepository<StoreEntity, Int> {
 
-    fun findByNameContainingAndStatusIsTrue(name: String) : List<StoreEntity>
+    fun findByNameContainingOrFormatNameContainingAndStatusIsTrue(name: String, formatName: String) : List<StoreEntity>
+
+
 
 }
