@@ -6,17 +6,14 @@ insert into role_authorities(authority_id, role_id) values (1, 1), (2,1),(3,1), 
 insert into users(id, role_id, last_name, name, password, username) values (1, 1, 'iba', 'gus', '$2a$10$yK7oOQmifS3BNDGBlQlLl.8YC26ZA3p992eBEbOQzwaArMC0A3M1K', 'grimgdl') ;
 
 
-
-
-
 #Groups
 
 INSERT INTO company_groups (`id`, `name`) VALUES (1, 'Chedraui');
 INSERT INTO company_groups (`id`, `name`) VALUES (2, 'Comercial Mexicana');
 INSERT INTO company_groups (`id`, `name`) VALUES (3, 'Soriana');
 INSERT INTO company_groups (`id`, `name`) VALUES (4, 'Farmacias Guadalajara');
-INSERT INTO company_groups (`id`, `name`) VALUES (5, 'ABARROTERA CIROS');
-INSERT INTO company_groups (`id`, `name`) VALUES (6, 'ABARROTES EL JEFE');
+INSERT INTO company_groups (`id`, `name`) VALUES (5, 'Abarratera CIROS');
+INSERT INTO company_groups (`id`, `name`) VALUES (6, 'Abarrotes EL JEFE');
 INSERT INTO company_groups (`id`, `name`) VALUES (7, 'Arteli');
 INSERT INTO company_groups (`id`, `name`) VALUES (8, 'CALIMAX');
 INSERT INTO company_groups (`id`, `name`) VALUES (9, 'CANAL TRADICIONAL');
@@ -32,7 +29,7 @@ INSERT INTO company_groups (`id`, `name`) VALUES (18, 'HEB');
 INSERT INTO company_groups (`id`, `name`) VALUES (19, 'IMSS');
 INSERT INTO company_groups (`id`, `name`) VALUES (20, 'ISSSTE');
 INSERT INTO company_groups (`id`, `name`) VALUES (21, 'LEY');
-INSERT INTO company_groups (`id`, `name`) VALUES (22, 'LIVERPOOL');
+INSERT INTO company_groups (`id`, `name`) VALUES (22, 'Liverpool');
 INSERT INTO company_groups (`id`, `name`) VALUES (23, 'SAN JORGE Y CIA');
 INSERT INTO company_groups (`id`, `name`) VALUES (24, 'SMART & FINAL');
 INSERT INTO company_groups (`id`, `name`) VALUES (25, 'Walmart');
@@ -44,12 +41,12 @@ INSERT INTO `formats` (`id`, `id_group`, `name`) VALUES (2, 1, 'SELECTO');
 INSERT INTO `formats` (`id`, `id_group`, `name`) VALUES (3, 1, 'SUPER');
 INSERT INTO `formats` (`id`, `id_group`, `name`) VALUES (4, 2, 'APR');
 INSERT INTO `formats` (`id`, `id_group`, `name`) VALUES (5, 2, 'BCM');
-INSERT INTO `formats` (`id`, `id_group`, `name`) VALUES (6, 2, 'COMERCIAL MEXICANA');
+INSERT INTO `formats` (`id`, `id_group`, `name`) VALUES (6, 2, 'Comercial Méxicana');
 INSERT INTO `formats` (`id`, `id_group`, `name`) VALUES (7, 2, 'CMK');
 INSERT INTO `formats` (`id`, `id_group`, `name`) VALUES (8, 2, 'FM');
 INSERT INTO `formats` (`id`, `id_group`, `name`) VALUES (9, 2, 'MEGA');
 INSERT INTO `formats` (`id`, `id_group`, `name`) VALUES (10, 2, 'SUMESA');
-INSERT INTO `formats` (`id`, `id_group`, `name`) VALUES (11, 4, 'FMG');
+INSERT INTO `formats` (`id`, `id_group`, `name`) VALUES (11, 4, 'Farmacias Guadalajara');
 INSERT INTO `formats` (`id`, `id_group`, `name`) VALUES (12, 18, 'TIENDA HEB');
 INSERT INTO `formats` (`id`, `id_group`, `name`) VALUES (13, 19, 'IMSS');
 INSERT INTO `formats` (`id`, `id_group`, `name`) VALUES (14, 19, 'TIENDA IMSS');
@@ -74,17 +71,17 @@ INSERT INTO `formats` (`id`, `id_group`, `name`) VALUES (32, 24, 'SMART & FINAL'
 INSERT INTO `formats` (`id`, `id_group`, `name`) VALUES (33, 8, 'CALIMAX');
 INSERT INTO `formats` (`id`, `id_group`, `name`) VALUES (34, 16, 'DEL SOL');
 INSERT INTO `formats` (`id`, `id_group`, `name`) VALUES (35, 16, 'WOOLWORTH');
-INSERT INTO `formats` (`id`, `id_group`, `name`) VALUES (36, 22, 'LIVERPOOL');
-INSERT INTO `formats` (`id`, `id_group`, `name`) VALUES (37, 3, 'MEGA');
-INSERT INTO `formats` (`id`, `id_group`, `name`) VALUES (38, 2, 'FRESKO');
+INSERT INTO `formats` (`id`, `id_group`, `name`) VALUES (36, 22, 'Liverpool');
+INSERT INTO `formats` (`id`, `id_group`, `name`) VALUES (37, 3, 'Mega');
+INSERT INTO `formats` (`id`, `id_group`, `name`) VALUES (38, 2, 'Fresko');
 INSERT INTO `formats` (`id`, `id_group`, `name`) VALUES (39, 12, 'Diconsa');
 INSERT INTO `formats` (`id`, `id_group`, `name`) VALUES (40, 3, 'City Club');
 INSERT INTO `formats` (`id`, `id_group`, `name`) VALUES (41, 7, 'Arteli');
 INSERT INTO `formats` (`id`, `id_group`, `name`) VALUES (42, 15, 'Garis');
 INSERT INTO `formats` (`id`, `id_group`, `name`) VALUES (43, 15, 'Cedis');
-INSERT INTO `formats` (`id`, `id_group`, `name`) VALUES (44, 23, 'ABARROTERA SAN JORGE');
-INSERT INTO `formats` (`id`, `id_group`, `name`) VALUES (45, 5, 'ABARROTERA CIROS');
-INSERT INTO `formats` (`id`, `id_group`, `name`) VALUES (46, 10, 'CITY ABASTO');
+INSERT INTO `formats` (`id`, `id_group`, `name`) VALUES (44, 23, 'Abarrotera SAN JORGE');
+INSERT INTO `formats` (`id`, `id_group`, `name`) VALUES (45, 5, 'Abarrotera CIROS');
+INSERT INTO `formats` (`id`, `id_group`, `name`) VALUES (46, 10, 'CITY Abastos');
 INSERT INTO `formats` (`id`, `id_group`, `name`) VALUES (47, 14, 'EL PATRON');
 INSERT INTO `formats` (`id`, `id_group`, `name`) VALUES (48, 11, 'COMERCIAL CASTAÃ‘EDA SN A');
 INSERT INTO `formats` (`id`, `id_group`, `name`) VALUES (49, 6, 'ABARROTES EL JEFE');
@@ -130,7 +127,7 @@ INSERT INTO `stores` (`id`, `id_format`, `lat`, `lon`, `name`) VALUES (33, 1, 20
 INSERT INTO `stores` (`id`, `id_format`, `lat`, `lon`, `name`) VALUES (34, 1, 21.1336690, -101.7184950, 'LEON IV');
 INSERT INTO `stores` (`id`, `id_format`, `lat`, `lon`, `name`) VALUES (35, 1, 19.1598280, -96.1335730, 'VER FLORESTA');
 INSERT INTO `stores` (`id`, `id_format`, `lat`, `lon`, `name`) VALUES (36, 1, 19.2134080, -96.1877690, 'VER LAS BRISAS');
-INSERT INTO `stores` (`id`, `id_format`, `lat`, `lon`, `name`) VALUES (37, 1, 19.2050580, -96.1617500, 'VER  NORTE');
+INSERT INTO `stores` (`id`, `id_format`, `lat`, `lon`, `name`) VALUES (37, 1, 19.2050580, -96.1617500, 'VER NORTE');
 INSERT INTO `stores` (`id`, `id_format`, `lat`, `lon`, `name`) VALUES (38, 1, 19.2089070, -96.2242070, 'PONTI');
 INSERT INTO `stores` (`id`, `id_format`, `lat`, `lon`, `name`) VALUES (39, 1, 19.5381440, -96.9065220, 'CRYSTAL');
 INSERT INTO `stores` (`id`, `id_format`, `lat`, `lon`, `name`) VALUES (40, 1, 19.5200030, -96.8841070, 'ANIMAS');
@@ -423,7 +420,7 @@ INSERT INTO `stores` (`id`, `id_format`, `lat`, `lon`, `name`) VALUES (326, 19, 
 INSERT INTO `stores` (`id`, `id_format`, `lat`, `lon`, `name`) VALUES (327, 19, 19.5505410, -99.0522730, 'VA MORELOS');
 INSERT INTO `stores` (`id`, `id_format`, `lat`, `lon`, `name`) VALUES (328, 19, 19.6332620, -99.0336400, 'TECAMAC II');
 INSERT INTO `stores` (`id`, `id_format`, `lat`, `lon`, `name`) VALUES (329, 19, 19.5574040, -99.0225110, 'GOBERNADORA');
-INSERT INTO `stores` (`id`, `id_format`, `lat`, `lon`, `name`) VALUES (330, 19, 19.5514820, -99.0195710, 'CD  AZTECA');
+INSERT INTO `stores` (`id`, `id_format`, `lat`, `lon`, `name`) VALUES (330, 19, 19.5514820, -99.0195710, 'CD AZTECA');
 INSERT INTO `stores` (`id`, `id_format`, `lat`, `lon`, `name`) VALUES (331, 21, 19.5410710, -99.0344960, 'PIRAMIDE');
 INSERT INTO `stores` (`id`, `id_format`, `lat`, `lon`, `name`) VALUES (332, 18, 19.4991554, -99.0449663, 'ARAGON');
 INSERT INTO `stores` (`id`, `id_format`, `lat`, `lon`, `name`) VALUES (333, 21, 19.5092100, -99.1000110, 'ATZOACALCO');

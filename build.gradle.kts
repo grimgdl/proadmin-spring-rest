@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "com.grim.spring.proadmin"
-version = "0.0.1-SNAPSHOT"
+version = "0.0.2-alpha"
 
 java {
 	toolchain {

@@ -1,5 +1,7 @@
 package com.grim.spring.proadmin.model
 
+import com.fasterxml.jackson.annotation.JsonGetter
+import com.fasterxml.jackson.annotation.JsonIgnore
 import jakarta.persistence.*
 import java.util.*
 
@@ -14,6 +16,7 @@ data class ParentCompanyEntity(
     @Column(nullable = false, columnDefinition = "bit default true")
     val status: Boolean ,
     @Column(columnDefinition = "DATETIME DEFAULT CURRENT_TIMESTAMP")
+    @JsonIgnore
     val createdAt: Date,
     val img: String? = null
 
