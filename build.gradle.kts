@@ -11,7 +11,7 @@ version = "0.0.2-alpha"
 
 java {
 	toolchain {
-		languageVersion = JavaLanguageVersion.of(21)
+		languageVersion = JavaLanguageVersion.of(17)
 	}
 }
 
@@ -32,7 +32,7 @@ dependencies {
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 
 
-	implementation("io.github.cdimascio:dotenv-kotlin:6.4.1")
+	implementation("me.paulschwarz:spring-dotenv:4.0.0")
 }
 
 kotlin {
