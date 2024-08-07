@@ -13,5 +13,8 @@ class StoreService(@Autowired private val storeRepository: StoreRepository) {
         return storeRepository.findAll()
     }
 
+    fun getStoresByName( name: String): List<StoreEntity> {
+        return storeRepository.findByNameContainingAndStatusIsTrue(name)
+    }
 
 }

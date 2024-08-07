@@ -16,6 +16,8 @@ data class StoreEntity(
     @Column(nullable = false, precision = 10, scale = 7)
     val lon: BigDecimal,
 
+    val phoneNumber: String,
+
     val address: String,
     @Column(columnDefinition = "bit default true", nullable = false)
     val status: Boolean = true,
