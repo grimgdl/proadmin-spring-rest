@@ -1,6 +1,5 @@
 package com.grim.spring.proadmin.model
 
-import com.fasterxml.jackson.annotation.JsonGetter
 import com.fasterxml.jackson.annotation.JsonIgnore
 import jakarta.persistence.*
 import java.util.*
